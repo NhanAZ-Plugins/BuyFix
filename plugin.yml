@@ -1,0 +1,12 @@
+name: Buyfix
+main: apvp\apvp1
+version: 1.0.0
+api: 2.0.0
+author: Niolz Gamer
+
+commands:
+   buyfix:
+     description: Sửa chữa trang bị dành cho Người Chơi
+     
+#Việt hoá v1.0.0
+#Edit: Ghast Noob
