@@ -2,4 +2,5 @@
 amount: 100
 Msg1: §a❖§bＦ§cＩ§eＸ§a❖ §f| §aĐã Sửa Chữa Trang Bị Thành Công §f|
 Msg2: §a❖§bＦ§cＩ§eＸ§a❖ §f| §cBạn Không Đủ Tiền Để Sửa Chữa §f|
-...
+Msg3: §a❖§bＦ§cＩ§eＸ§a❖ §f| §cGiao dịch thất bại, vật phẩm chưa được sửa.§f|
+Msg4: §a❖§bＦ§cＩ§eＸ§a❖ §f| §cCầm một vật phẩm có độ bền bị hỏng.§f|

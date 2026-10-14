@@ -1,12 +1,17 @@
 name: Buyfix
 main: apvp\apvp1
-version: 1.0.0
-api: 2.0.0
+version: 2.0.0
+api: 5.0.0
 author: Niolz Gamer
+softdepend:
+  - EconomyAPI
 
 commands:
-   buyfix:
-     description: Sửa chữa trang bị dành cho Người Chơi
-     
-#Việt hoá v1.0.0
-#Edit: Ghast Noob
+  buyfix:
+    description: Repair the held damaged item for the configured price
+    permission: buyfix.command
+
+permissions:
+  buyfix.command:
+    description: Allows the player to repair the held item
+    default: true

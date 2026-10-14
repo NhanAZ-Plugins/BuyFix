@@ -1,11 +1,18 @@
 # BuyFix
 
-BuyFix is a legacy PocketMine-MP plugin snapshot intended to charge a player to repair the item in their hand with `/buyfix`. Its manifest declares plugin API 2.0.0, credits Niolz Gamer as author and records a Vietnamese edit by Ghast Noob.
+BuyFix repairs the damaged tool or armor item a player is holding after EconomyAPI accepts the configured payment. It preserves the original Vietnamese success and insufficient-balance messages and the default price of 100.
 
-The source looks up an external plugin named `EconomyAPI` and calls its money methods, but `plugin.yml` does not declare that dependency. The default fee and messages are in [the bundled configuration](resources/config.yml). The command compares a `Command` object with the string `buyfix`, does not verify that the sender is a player before accessing an inventory, and ignores the result from `reduceMoney()` before storing the repaired item. Do not deploy or use it with real player balances.
+## Requirements
 
-This snapshot uses the historical `pocketmine\Player` class and item damage API. It has not been ported or tested on Axolotl-PM 5.x. There is no current Axolotl-PM 5 build, runtime test or stable release.
+- Minimum Axolotl-PM API: 5.0.0. CI checks the exact API 5.0.0 and 5.49.1 source revisions; this does not prove support for every API 5.x revision.
+- An API 5-compatible [EconomyAPI](https://github.com/ACM-PocketMine-MP/EconomyAPI) plugin exposing myMoney() and reduceMoney().
 
-The repository has no LICENSE file or documented grant to redistribute a modified build. The original source, author credits and translated messages remain unchanged. A safe repair or modern port cannot be published until source rights are verified; it would also need a declared economy dependency, checked transaction result, and compatibility and behavior tests.
+## Use
 
-See [plugin.yml](plugin.yml) and [the historical source](src/apvp/apvp1.php) for the exact implementation.
+Set the price and optional messages in [resources/config.yml](resources/config.yml). Players can use **/buyfix** while holding a damaged durable item. The configured price must be positive and have no more than two decimal places. BuyFix does not charge for undamaged or non-durable items. It changes the held item only after reduceMoney() returns the EconomyAPI success result.
+
+## Build and verification
+
+GitHub Actions runs the transaction fixture, PHPStan at maximum level, builds and inspects the plugin PHAR against pinned API 5 source revisions, then smoke-tests the API 5.49.1 artifact on the checksum-verified Axolotl-PM server. See the [build workflow](https://github.com/NhanAZ-Plugins/BuyFix/actions/workflows/build.yml) for exact tested revisions and results. The fixture verifies that rejected payments leave item durability unchanged; the runtime smoke verifies startup and does not exercise a connected player or a live economy provider.
+
+Original author: Niolz Gamer. Vietnamese edit: Ghast Noob. This repository has no license file or recorded license grant.
