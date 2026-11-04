@@ -1,6 +1,14 @@
 # BuyFix
 
-BuyFix repairs the damaged tool or armor item a player is holding after EconomyAPI accepts the configured payment. It preserves the original Vietnamese success and insufficient-balance messages and the default price of 100.
+Item repair plugin for Axolotl-PM API 5 with EconomyAPI integration.
+
+[![CI](https://github.com/NhanAZ-Plugins/BuyFix/actions/workflows/build.yml/badge.svg)](https://github.com/NhanAZ-Plugins/BuyFix/actions/workflows/build.yml)
+[![Latest release](https://img.shields.io/github/v/release/NhanAZ-Plugins/BuyFix)](https://github.com/NhanAZ-Plugins/BuyFix/releases/latest)
+[![Discord](https://img.shields.io/discord/986553214889517088?label=Discord&logo=discord&logoColor=white&color=5865F2)](https://discord.gg/j2X83ujT6c)
+
+## Overview
+
+This plugin targets the PocketMine-MP and Axolotl-PM API 5 ecosystem and is maintained under [NhanAZ-Plugins](https://github.com/NhanAZ-Plugins).
 
 ## Requirements
 
