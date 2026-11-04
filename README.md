@@ -20,4 +20,9 @@ Set the price and optional messages in [resources/config.yml](resources/config.y
 
 GitHub Actions runs the transaction fixture, PHPStan at maximum level, builds and inspects the plugin PHAR against pinned API 5 source revisions, then smoke-tests the API 5.49.1 artifact on the checksum-verified Axolotl-PM server. See the [build workflow](https://github.com/NhanAZ-Plugins/BuyFix/actions/workflows/build.yml) for exact tested revisions and results. The fixture verifies that rejected payments leave item durability unchanged; the runtime smoke verifies startup and does not exercise a connected player or a live economy provider.
 
-Original author: Niolz Gamer. Vietnamese edit: Ghast Noob. This repository has no license file or recorded license grant.
+Original author: Niolz Gamer. Vietnamese edit: NhanAZ. This repository has no license file or recorded license grant.
+
+
+## Credits
+
+Authors: NhanAZ, Niolz Gamer.
