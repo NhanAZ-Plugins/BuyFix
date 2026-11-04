@@ -2,7 +2,7 @@ name: Buyfix
 main: apvp\apvp1
 version: 2.0.0
 api: 5.0.0
-author: Niolz Gamer
+authors: ["NhanAZ", "Niolz Gamer"]
 softdepend:
   - EconomyAPI
 
